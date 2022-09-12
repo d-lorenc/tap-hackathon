@@ -2,6 +2,7 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: dariusz-hack
+  namespace: dariusz
   labels:
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/part-of: dariusz-hack
@@ -12,6 +13,6 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/d-lorenc/tap-hackathon
+      url: https://github.com/d-lorenc/tap-hackathon.git
       ref:
         branch: main
